@@ -1,25 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { Button , Container, Grid, Tabs } from '@mantine/core';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Tabs>
+          <Tabs.Tab label={'Portfolio'}>Portfolio Page</Tabs.Tab>
+          <Tabs.Tab label={'Other Page'}>Other Page</Tabs.Tab>
+          <Tabs.Tab label={'Other Page1'}>Other Page1</Tabs.Tab>
+      </Tabs>
+      <Container fluid={true} style={{ marginBottom: '20vh' }}>
+        <Grid align={'start'} justify={'center'} style={{ height: 'inherit' }}>
+          <Grid.Col span={3}>
+            <Button size='xl'>Hi there</Button>
+          </Grid.Col>
+        </Grid>
+      </Container>
+    </>
   );
 }
 
