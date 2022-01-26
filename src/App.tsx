@@ -1,22 +1,21 @@
 import React, { useState } from 'react';
-import { Button , Container, Grid, Tabs } from '@mantine/core';
+import { MantineProvider } from '@mantine/core';
+import { AppShell, ThemeIcon, useMantineTheme } from '@mantine/core';
+import Content from './components/Content';
+import Footer from './components/Footer';
+import Header from './components/Header';
 
 function App() {
+
+  const theme = useMantineTheme();
+
   return (
-    <>
-      <Tabs>
-          <Tabs.Tab label={'Portfolio'}>Portfolio Page</Tabs.Tab>
-          <Tabs.Tab label={'Other Page'}>Other Page</Tabs.Tab>
-          <Tabs.Tab label={'Other Page1'}>Other Page1</Tabs.Tab>
-      </Tabs>
-      <Container fluid={true} style={{ marginBottom: '20vh' }}>
-        <Grid align={'start'} justify={'center'} style={{ height: 'inherit' }}>
-          <Grid.Col span={3}>
-            <Button size='xl'>Hi there</Button>
-          </Grid.Col>
-        </Grid>
-      </Container>
-    </>
+    <MantineProvider>
+      <Header />
+      <Content />
+      <Footer />      
+    </MantineProvider>
+    
   );
 }
 

@@ -2,12 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { MantineProvider } from '@mantine/core';
+
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
-  <MantineProvider>
+  <BrowserRouter>
     <App />
-  </MantineProvider>,
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
