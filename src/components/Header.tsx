@@ -1,14 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import {
     Group,
     Button,
-    Badge,
-    Container,
+    Burger,
     useMantineTheme,
-    Grid,
-    Image,
-    Tabs,
-    Avatar
+    Avatar,
+    MediaQuery
 } from '@mantine/core';
 import {
     ExternalLinkIcon,
@@ -17,57 +14,74 @@ import {
 import NavButtons from "./NavButtons";
 
 export default function Header() {
+
+    const [burgerOpened, setBurgerOpened] = useState(false);
+
     const theme = useMantineTheme();
 
     return (
-        <Container fluid style={{
-            backgroundColor: theme.colors.gray[4],
-        }}>
-            <Grid columns={24} justify={'center'} align={'center'} gutter={'sm'}>
-                <Grid.Col span={2} style={{ backgroundColor: theme.colors.gray[6] }}>
-                    <Avatar
-                        alt="Warren Goodson"
-                        src="./logo.png"
+        <>
+            <div style={{
+                display: "flex",
+                alignItems: "center",
+                backgroundColor: theme.colors.gray[4]
+            }}>
+                <MediaQuery largerThan={"sm"} styles={{display: "none"}}>
+                    <Burger 
+                        opened={burgerOpened}
+                        onClick={() => setBurgerOpened((openedState) => !openedState)}
+                        size={"sm"}
+                        color={theme.colors.gray[6]}
+                        mr={"xl"}
                     />
-                </Grid.Col>
-                <Grid.Col span={6} style={{ backgroundColor: theme.colors.gray[5] }}>
-                    <NavButtons />
-                </Grid.Col>
-                <Grid.Col span={6} offset={10} style={{ backgroundColor: theme.colors.gray[5] }}>
-                    <Group style={{ marginLeft: "auto" }}>
-                        <Button
-                            component="a"
-                            href="https://github.com/WGoodsonDev"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            variant="gradient"
-                            gradient={{ from: 'blue', to: 'cyan', deg: 60 }}
-                            radius="lg"
-                            leftIcon={<GitHubLogoIcon width={18} height={18} />}
-                            rightIcon={<ExternalLinkIcon width={15} height={15} />}
-                        >
-                            GitHub
-                        </Button>
-                        <Button
-                            component="a"
-                            href="https://www.linkedin.com/in/warren-goodson/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            variant="gradient"
-                            gradient={{ from: 'blue', to: 'cyan', deg: 60 }}
-                            radius="lg"
-                            rightIcon={<ExternalLinkIcon width={15} height={15} />}
-                        >
-                            LinkedIn
-                        </Button>
+                </MediaQuery>
+                <div style={{ marginRight: "20px" }}>
+                    <Avatar alt="Warren Goodson" src="./logo.png" />
+                </div>
+
+                <MediaQuery smallerThan={"sm"} styles={{display: "none"}}>
+                    <Group>
+                        <NavButtons />  
                     </Group>
+                </MediaQuery>
+                
+                <Group style={{ marginLeft: "auto" }}>
+                    <Button
+                        component="a"
+                        href="https://github.com/WGoodsonDev"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        variant="gradient"
+                        gradient={{ from: 'blue', to: 'cyan', deg: 60 }}
+                        radius="lg"
+                        leftIcon={<GitHubLogoIcon width={18} height={18} />}
+                        rightIcon={<ExternalLinkIcon width={15} height={15} />}
+                    >
+                        GitHub
+                    </Button>
+                    <Button
+                        component="a"
+                        href="https://www.linkedin.com/in/warren-goodson/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        variant="gradient"
+                        gradient={{ from: 'blue', to: 'cyan', deg: 60 }}
+                        radius="lg"
+                        rightIcon={<ExternalLinkIcon width={15} height={15} />}
+                    >
+                        LinkedIn
+                    </Button>
+                </Group>
 
 
-                </Grid.Col>
 
-            </Grid>
+                
 
-        </Container>
+
+            </div>
+        </>
+
+
 
 
 
