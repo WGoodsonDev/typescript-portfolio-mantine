@@ -13,6 +13,7 @@ export default function ProjectTable() {
                         <th>Project</th>
                         <th>Description</th>
                         <th>Skills Used</th>
+                        <th>Link(s)</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -20,16 +21,19 @@ export default function ProjectTable() {
                         <td>Project Name</td>
                         <td>Description</td>
                         <td>Skills Used</td>
+                        <td>LINK</td>
                     </tr>
                     <tr>
                         <td>Project Name</td>
                         <td>Description</td>
                         <td>Skills Used</td>
+                        <td>LINK</td>
                     </tr>
                     <tr>
                         <td>Project Name</td>
                         <td>Description</td>
                         <td>Skills Used</td>
+                        <td>LINK</td>
                     </tr>
                 </tbody>
             </Table>
