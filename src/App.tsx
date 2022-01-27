@@ -15,9 +15,7 @@ function App() {
         backgroundColor: theme.colors.gray[3],
       }}>
         <Header />
-        <Divider />
         <Content />
-        <Divider />
         <Footer />
       </div>
 
