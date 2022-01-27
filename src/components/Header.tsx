@@ -24,6 +24,7 @@ export default function Header() {
             <div style={{
                 display: "flex",
                 alignItems: "center",
+                padding: "10px",
                 backgroundColor: theme.colors.gray[4]
             }}>
                 <MediaQuery largerThan={"sm"} styles={{display: "none"}}>
