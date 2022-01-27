@@ -14,6 +14,7 @@ import {
     ExternalLinkIcon,
     GitHubLogoIcon
 } from '@radix-ui/react-icons';
+import NavButtons from "./NavButtons";
 
 export default function Header() {
     const theme = useMantineTheme();
@@ -30,11 +31,7 @@ export default function Header() {
                     />
                 </Grid.Col>
                 <Grid.Col span={6} style={{ backgroundColor: theme.colors.gray[5] }}>
-                    <Tabs grow variant="default">
-                        <Tabs.Tab label="Portfolio" />
-                        <Tabs.Tab label="Extra" />
-                        <Tabs.Tab label="About Me" />
-                    </Tabs>
+                    <NavButtons />
                 </Grid.Col>
                 <Grid.Col span={6} offset={10} style={{ backgroundColor: theme.colors.gray[5] }}>
                     <Group style={{ marginLeft: "auto" }}>
