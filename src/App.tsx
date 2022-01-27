@@ -26,7 +26,7 @@ function App() {
         <Content />
         <Footer />
         <Affix position={{ bottom: 20, left: 20 }}>
-          <Transition transition="slide-up" mounted={scroll.y > 0}>
+          <Transition transition="slide-up" mounted={scroll.y > 300}>
             {(transitionStyles) => (
               <a href='https://github.com/WGoodsonDev/typescript-portfolio-mantine'
                 target="_blank"
