@@ -5,7 +5,9 @@ import {
     Burger,
     useMantineTheme,
     Avatar,
-    MediaQuery
+    MediaQuery,
+    Collapse,
+    Paper
 } from '@mantine/core';
 import {
     ExternalLinkIcon,
@@ -27,8 +29,8 @@ export default function Header() {
                 padding: "10px",
                 backgroundColor: theme.colors.gray[4]
             }}>
-                <MediaQuery largerThan={"sm"} styles={{display: "none"}}>
-                    <Burger 
+                <MediaQuery largerThan={"sm"} styles={{ display: "none" }}>
+                    <Burger
                         opened={burgerOpened}
                         onClick={() => setBurgerOpened((openedState) => !openedState)}
                         size={"sm"}
@@ -40,12 +42,12 @@ export default function Header() {
                     <Avatar alt="Warren Goodson" src="./logo.png" />
                 </div>
 
-                <MediaQuery smallerThan={"sm"} styles={{display: "none"}}>
+                <MediaQuery smallerThan={"sm"} styles={{ display: "none" }}>
                     <Group>
-                        <NavButtons />  
+                        <NavButtons orientation="horizontal" />
                     </Group>
                 </MediaQuery>
-                
+
                 <Group style={{ marginLeft: "auto" }}>
                     <Button
                         component="a"
@@ -73,13 +75,40 @@ export default function Header() {
                         LinkedIn
                     </Button>
                 </Group>
-
-
-
-                
-
-
             </div>
+            {burgerOpened && (
+                <MediaQuery largerThan="sm" styles={{ display: "none" }}>
+                    <Collapse in={burgerOpened}>
+                        <div
+                            style={{
+                                display: "flex",
+                                alignItems: "center",
+                                height: "100%",
+                                width: "120%",
+                            }}
+                        >
+                            <Paper
+                                padding="md"
+                                shadow="xs"
+                                style={{
+                                    width: "100%",
+                                    zIndex: 2,
+                                    marginLeft: "-20px",
+                                    marginTop: "10px",
+                                }}
+                            >
+                                <Group
+                                    key={"burgerGroup"}
+                                    direction="column"
+                                    style={{ marginLeft: "10px", zIndex: 100 }}
+                                >
+                                    <NavButtons orientation="vertical" />
+                                </Group>
+                            </Paper>
+                        </div>
+                    </Collapse>
+                </MediaQuery>
+            )}
         </>
 
 

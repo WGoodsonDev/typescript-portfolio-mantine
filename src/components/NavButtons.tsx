@@ -8,9 +8,13 @@ import {
     CrumpledPaperIcon
 } from '@radix-ui/react-icons';
 
-export default function NavButtons() {
+interface Props {
+    orientation: "horizontal" | "vertical"
+}
+
+export default function NavButtons({ orientation }: Props) {
     return (
-        <Tabs grow variant="default">
+        <Tabs orientation={orientation} grow variant="default">
             <Tabs.Tab icon={<HomeIcon />} label="Portfolio" />
             <Tabs.Tab icon={<BackpackIcon />} label="Extra" />
             <Tabs.Tab icon={<CrumpledPaperIcon />} label="About Me" />
