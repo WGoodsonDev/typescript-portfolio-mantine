@@ -35,7 +35,7 @@ export default function NavButtons({ orientation }: Props) {
             active={activeTab}
             onTabChange={tabChange}    
         >
-            <Tabs.Tab icon={<HomeIcon />} label="About" />
+            <Tabs.Tab icon={<HomeIcon />} label="Home" />
             <Tabs.Tab icon={<BackpackIcon />} label="Tech Stack" />
             <Tabs.Tab icon={<CrumpledPaperIcon />} label="Projects" />
         </Tabs>

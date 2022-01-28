@@ -11,6 +11,7 @@ export default function Footer() {
                 display: "flex",
                 alignItems: "center",
                 padding: "10px",
+                marginTop: "auto"
             }}>
                 <div style={{ marginRight: "20px" }}>
                     Warren Goodson, 2022
