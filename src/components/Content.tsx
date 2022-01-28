@@ -14,7 +14,7 @@ import { Route, Routes } from 'react-router-dom';
 
 export default function Content() {
     return (
-        <Container fluid style={{ margin: '20px', height: '80vh' }}>
+        <Container fluid style={{ margin: '20px', height: 'calc(100vh - 144px)' }}>
             <Grid
                 justify={"center"}
                 align={"center"}

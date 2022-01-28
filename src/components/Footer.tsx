@@ -14,7 +14,7 @@ export default function Footer() {
                 marginTop: "auto"
             }}>
                 <div style={{ marginRight: "20px" }}>
-                    Warren Goodson, 2022
+                    
                 </div>
                 <div style={{ marginLeft: "auto"}}>
                     <a href="https://www.linkedin.com/in/warren-goodson/"

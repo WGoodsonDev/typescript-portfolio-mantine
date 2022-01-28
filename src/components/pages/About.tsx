@@ -7,24 +7,32 @@ import {
     Title,
     Text,
     Grid,
-    Center
+    Center,
+    MediaQuery,
+    useMantineTheme
 } from '@mantine/core';
+import { useMediaQuery } from "@mantine/hooks";
 
 export default function About() {
+
+    const theme = useMantineTheme();
+    const largerThanMd = useMediaQuery(`(min-width: ${theme.breakpoints.md}px)`);
+
     return (
         <Center>
             <Grid
+                columns={24}
                 justify={"center"}
                 align={"center"}
                 gutter={"xs"}
                 style={{ height: "inherit", width: "100%" }}
             >
-                <Grid.Col offset={1} span={6}>
-                    <svg viewBox="0 0 64 40" height={"300"} width={"640"}>
+                <Grid.Col offset={0} span={largerThanMd ? 10 : 6}>
+                    <svg viewBox="0 0 64 40" height={"300"} width={largerThanMd ? "640" : "240"}>
                         <text x={"0"} y={"15"} fill={"white"}><tspan>Warren</tspan><tspan x={"0"} y={"34"}>Goodson</tspan></text>
                     </svg>
                 </Grid.Col>
-                <Grid.Col span={4}>
+                <Grid.Col span={largerThanMd ? 8 : 10}>
                     <Paper padding="lg">
                         <Group position="apart" style={{ marginBottom: "1rem" }}>
                             <Title order={1}>About Me</Title>
@@ -44,7 +52,7 @@ export default function About() {
                         </Card>
                     </Paper>
                 </Grid.Col>
-                <Grid.Col span={1} />
+                <Grid.Col span={2} />
             </Grid>
         </Center>
 

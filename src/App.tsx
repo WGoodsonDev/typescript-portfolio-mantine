@@ -6,7 +6,7 @@ import {
   Transition,
   useMantineTheme
 } from '@mantine/core';
-import { useWindowScroll } from '@mantine/hooks';
+import { useMouse } from '@mantine/hooks';
 import { ExternalLinkIcon } from '@radix-ui/react-icons';
 import Content from './components/Content';
 import Footer from './components/Footer';
@@ -17,7 +17,7 @@ import ParticlesBackground from './components/ParticlesBackground';
 function App() {
 
   const theme = useMantineTheme();
-  const [scroll, scrollTo] = useWindowScroll();
+  const {ref, x, y} = useMouse();
 
   return (
     <MantineProvider>
@@ -30,7 +30,7 @@ function App() {
         <Content />
         <Footer />
         <Affix position={{ bottom: 20, left: 20 }}>
-          <Transition transition="slide-up" mounted={scroll.y >= 0}>
+          <Transition transition="slide-up" mounted={y >= 800}>
             {(transitionStyles) => (
               <a href='https://github.com/WGoodsonDev/typescript-portfolio-mantine'
                 target="_blank"
