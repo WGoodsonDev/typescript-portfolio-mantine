@@ -7,10 +7,10 @@ import {
     Title,
     Divider
 } from '@mantine/core';
-import ProjectTable from "./ProjectTable";
 import TechStack from "./TechStack";
 import About from "./About";
 import Projects from "./Projects";
+import { Route, Routes } from 'react-router-dom';
 
 export default function Content() {
     return (
@@ -21,12 +21,12 @@ export default function Content() {
                 gutter={"xs"}
                 style={{ height: "inherit" }}
             >
-                <Grid.Col span={6}>
-                    <About />
-                    <Divider style={{ margin: "10px 0px 10px 0px" }} />
-                    <TechStack />
-                    <Divider style={{ margin: "10px 0px 10px 0px" }} />
-                    <Projects />
+                <Grid.Col span={9}>
+                    <Routes>
+                        <Route path="/" element={<About />}/>
+                        <Route path="/tech-stack" element={<TechStack />}/>
+                        <Route path="/projects" element={<Projects />}/>
+                    </Routes>
                 </Grid.Col>
 
             </Grid>

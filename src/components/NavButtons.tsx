@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
     Tabs,
 } from '@mantine/core';
@@ -7,17 +7,37 @@ import {
     BackpackIcon,
     CrumpledPaperIcon
 } from '@radix-ui/react-icons';
+import { useNavigate } from 'react-router-dom';
 
 interface Props {
     orientation: "horizontal" | "vertical"
-}
+};
+
+const tabNavs = [
+    "/",
+    "/tech-stack",
+    "/projects"
+];
 
 export default function NavButtons({ orientation }: Props) {
+
+    
+
+    const navigate = useNavigate();
+    const [activeTab, setActiveTab] = useState(0);
+    const tabChange = (active: number, tabkey: string) => {
+        setActiveTab(active);
+        navigate(tabNavs[active]);
+    };
+
     return (
-        <Tabs orientation={orientation} grow variant="default">
-            <Tabs.Tab icon={<HomeIcon />} label="Portfolio" />
-            <Tabs.Tab icon={<BackpackIcon />} label="Extra" />
-            <Tabs.Tab icon={<CrumpledPaperIcon />} label="About Me" />
+        <Tabs orientation={orientation} grow variant="default"
+            active={activeTab}
+            onTabChange={tabChange}    
+        >
+            <Tabs.Tab icon={<HomeIcon />} label="About" />
+            <Tabs.Tab icon={<BackpackIcon />} label="Tech Stack" />
+            <Tabs.Tab icon={<CrumpledPaperIcon />} label="Projects" />
         </Tabs>
-    )
-}
+    );
+};
