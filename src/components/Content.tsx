@@ -25,12 +25,8 @@ export default function Content() {
                     <Route path="/" element={<About />} />
                     <Route path="/tech-stack" element={<TechStack />} />
                     <Route path="/projects" element={<Projects />} />
-
-
                 </Routes>
-
             </Grid>
         </Container>
-
     );
 }
