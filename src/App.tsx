@@ -11,6 +11,7 @@ import { ExternalLinkIcon } from '@radix-ui/react-icons';
 import Content from './components/Content';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import ParticlesBackground from './components/ParticlesBackground';
 
 function App() {
 
@@ -19,10 +20,13 @@ function App() {
 
   return (
     <MantineProvider>
+      
       <div style={{
-        backgroundColor: theme.colors.gray[3],
+        // backgroundColor: theme.colors.gray[3],
       }}>
+        <ParticlesBackground />
         <Header />
+        
         <Content />
         <Footer />
         <Affix position={{ bottom: 20, left: 20 }}>

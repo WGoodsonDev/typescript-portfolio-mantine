@@ -27,7 +27,8 @@ export default function Header() {
                 display: "flex",
                 alignItems: "center",
                 padding: "10px",
-                backgroundColor: theme.colors.gray[4]
+                backgroundColor: theme.colors.gray[4],
+                zIndex: 0
             }}>
                 <MediaQuery largerThan={"sm"} styles={{ display: "none" }}>
                     <Burger
