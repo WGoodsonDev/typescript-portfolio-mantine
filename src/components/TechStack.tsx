@@ -23,23 +23,47 @@ export default function TechStack(){
                                 <Grid gutter={"sm"}>
                                     <Grid.Col>
                                         <Badge style={{ marginBottom: "12px" }}>
-                                            Skill Category 1
+                                            Frontend Tech
                                         </Badge>
-                                        <Chips radius="sm" multiple defaultValue={['react']} style={{ display: "flex" }}>
-                                            <Chip value="react">React</Chip>
-                                            <Chip value="react">React</Chip>
-                                            <Chip value="react">React</Chip>
-                                            <Chip value="react">React</Chip>
+                                        <Chips radius="sm" defaultValue={['checked']} style={{ display: "flex" }}>
+                                            <Chip value="checked">React.js</Chip>
+                                            <Chip value="checked">HTML5</Chip>
+                                            <Chip value="checked">CSS3</Chip>
+                                            <Chip value="checked">SASS/LESS</Chip>
+                                            <Chip value="checked">MVC</Chip>
+                                            
                                         </Chips>
                                         <Divider style={{ margin: "10px 0px 10px 0px" }} />
                                         <Badge style={{ marginBottom: "12px" }}>
-                                            Skill Category 2
+                                            Backend Tech
                                         </Badge>
-                                        <Chips radius="sm" multiple defaultValue={['react']} style={{ display: "flex" }}>
-                                            <Chip value="react">React</Chip>
-                                            <Chip value="react">React</Chip>
-                                            <Chip value="react">React</Chip>
-                                            <Chip value="react">React</Chip>
+                                        <Chips radius="sm" defaultValue={['checked']} style={{ display: "flex" }}>
+                                            <Chip value="checked">Node.js</Chip>
+                                            <Chip value="checked">Express.js</Chip>
+                                            <Chip value="checked">ASP.NET</Chip>
+                                            <Chip value="checked">REST API</Chip>
+                                            <Chip value="checked">MySQL</Chip>
+                                            <Chip value="checked">MongoDB</Chip>
+                                        </Chips>
+                                        <Divider style={{ margin: "10px 0px 10px 0px" }} />
+                                        <Badge style={{ marginBottom: "12px" }}>
+                                            Languages
+                                        </Badge>
+                                        <Chips radius="sm" defaultValue={['checked']} style={{ display: "flex" }}>
+                                            <Chip value="checked">JavaScript</Chip>
+                                            <Chip value="checked">TypeScript</Chip>
+                                            <Chip value="checked">C/C++</Chip>
+                                            <Chip value="checked">C#</Chip>
+                                            <Chip value="checked">Python</Chip>
+                                        </Chips>
+                                        <Divider style={{ margin: "10px 0px 10px 0px" }} />
+                                        <Badge style={{ marginBottom: "12px" }}>
+                                            Tools
+                                        </Badge>
+                                        <Chips radius="sm" defaultValue={['checked']} style={{ display: "flex" }}>
+                                            <Chip value="checked">GitHub</Chip>
+                                            <Chip value="checked">Docker</Chip>
+                                            <Chip value="checked">Linux</Chip>
                                         </Chips>
                                     </Grid.Col>
                                 </Grid>
