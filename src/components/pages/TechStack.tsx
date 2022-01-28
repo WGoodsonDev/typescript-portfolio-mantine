@@ -9,10 +9,16 @@ import {
     Badge,
     Chips,
     Chip,
-    Divider
+    Divider,
+    useMantineTheme
 } from '@mantine/core';
+import { useMediaQuery } from "@mantine/hooks";
 
 export default function TechStack() {
+
+    const theme = useMantineTheme();
+    const largerThanMd = useMediaQuery(`(min-width: ${theme.breakpoints.md}px)`);
+
     return (
 
         <Grid
@@ -21,7 +27,7 @@ export default function TechStack() {
             gutter={"xs"}
             style={{ height: "inherit", width: "100%" }}
         >
-            <Grid.Col span={5}>
+            <Grid.Col span={largerThanMd ? 6 : 12}>
                 <Paper padding="lg">
                     <Group position="apart" style={{ marginBottom: "1rem" }}>
                         <Title order={1}>Tech Stack</Title>
