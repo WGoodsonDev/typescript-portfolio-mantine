@@ -14,12 +14,13 @@ import {
     GitHubLogoIcon
 } from '@radix-ui/react-icons';
 import NavButtons from "./NavButtons";
+import { useMediaQuery } from "@mantine/hooks";
 
 export default function Header() {
 
     const [burgerOpened, setBurgerOpened] = useState(false);
-
     const theme = useMantineTheme();
+    const largerThanSm = useMediaQuery(`(min-width: ${theme.breakpoints.sm}px)`);
 
     return (
         <>
@@ -51,6 +52,7 @@ export default function Header() {
 
                 <Group style={{ marginLeft: "auto" }}>
                     <Button
+                        size={largerThanSm ? "sm" : "xs"}
                         component="a"
                         href="https://github.com/WGoodsonDev"
                         target="_blank"
@@ -64,6 +66,7 @@ export default function Header() {
                         GitHub
                     </Button>
                     <Button
+                        size={largerThanSm ? "sm" : "xs"}
                         component="a"
                         href="https://www.linkedin.com/in/warren-goodson/"
                         target="_blank"

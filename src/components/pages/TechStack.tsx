@@ -17,7 +17,9 @@ import { useMediaQuery } from "@mantine/hooks";
 export default function TechStack() {
 
     const theme = useMantineTheme();
-    const largerThanMd = useMediaQuery(`(min-width: ${theme.breakpoints.md}px)`);
+    const largerThanSm = useMediaQuery(`(min-width: ${theme.breakpoints.sm}px)`);
+
+    const chipSize = largerThanSm ? "lg" : "xs";
 
     return (
 
@@ -27,7 +29,7 @@ export default function TechStack() {
             gutter={"xs"}
             style={{ height: "inherit", width: "100%" }}
         >
-            <Grid.Col span={largerThanMd ? 6 : 12}>
+            <Grid.Col span={largerThanSm ? 6 : 12}>
                 <Paper padding="lg">
                     <Group position="apart" style={{ marginBottom: "1rem" }}>
                         <Title order={1}>Tech Stack</Title>
@@ -39,7 +41,7 @@ export default function TechStack() {
                                     <Badge size="xl" style={{ marginBottom: "12px" }}>
                                         Frontend Tech
                                     </Badge>
-                                    <Chips size="lg" radius="md" defaultValue={['checked']} style={{ display: "flex" }}>
+                                    <Chips size={chipSize} radius="md" defaultValue={['checked']} style={{ display: "flex" }}>
                                         <Chip value="checked">React.js</Chip>
                                         <Chip value="checked">HTML5</Chip>
                                         <Chip value="checked">CSS3</Chip>
@@ -51,7 +53,7 @@ export default function TechStack() {
                                     <Badge size="xl" style={{ marginBottom: "12px" }}>
                                         Backend Tech
                                     </Badge>
-                                    <Chips size="lg" radius="md" defaultValue={['checked']} style={{ display: "flex" }}>
+                                    <Chips size={chipSize} radius="md" defaultValue={['checked']} style={{ display: "flex" }}>
                                         <Chip value="checked">Node.js</Chip>
                                         <Chip value="checked">Express.js</Chip>
                                         <Chip value="checked">ASP.NET</Chip>
@@ -63,7 +65,7 @@ export default function TechStack() {
                                     <Badge size="xl" style={{ marginBottom: "12px" }}>
                                         Languages
                                     </Badge>
-                                    <Chips size="lg" radius="md" defaultValue={['checked']} style={{ display: "flex" }}>
+                                    <Chips size={chipSize} radius="md" defaultValue={['checked']} style={{ display: "flex" }}>
                                         <Chip value="checked">JavaScript</Chip>
                                         <Chip value="checked">TypeScript</Chip>
                                         <Chip value="checked">C/C++</Chip>
@@ -74,7 +76,7 @@ export default function TechStack() {
                                     <Badge size="xl" style={{ marginBottom: "12px" }}>
                                         Tools
                                     </Badge>
-                                    <Chips size="lg" radius="md" defaultValue={['checked']} style={{ display: "flex" }}>
+                                    <Chips size={chipSize} radius="md" defaultValue={['checked']} style={{ display: "flex" }}>
                                         <Chip value="checked">GitHub</Chip>
                                         <Chip value="checked">Docker</Chip>
                                         <Chip value="checked">Linux</Chip>

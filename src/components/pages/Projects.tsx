@@ -11,7 +11,7 @@ import ProjectTable from '../ProjectTable';
 export default function Projects() {
 
     const theme = useMantineTheme();
-    const largerThanMd = useMediaQuery(`(min-width: ${theme.breakpoints.md}px)`);
+    const largerThanSm = useMediaQuery(`(min-width: ${theme.breakpoints.sm}px)`);
 
     return (
         <Grid
@@ -20,7 +20,7 @@ export default function Projects() {
             gutter={"xs"}
             style={{ height: "inherit", width: "100%" }}
         >
-            <Grid.Col span={largerThanMd ? 6 : 12}>
+            <Grid.Col span={largerThanSm ? 6 : 12}>
                 <Paper padding="lg">
                     <Group position="apart" style={{ marginBottom: "1rem" }}>
                         <Title order={1}>Projects</Title>
