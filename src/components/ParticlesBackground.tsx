@@ -1,7 +1,11 @@
 import React from "react";
 import Particles from "react-tsparticles";
+import { useMantineTheme } from "@mantine/core";
 
 export default function ParticlesBackground() {
+
+    const theme = useMantineTheme();
+
     return (
         <Particles options={{
             backgroundMode: {
@@ -9,32 +13,34 @@ export default function ParticlesBackground() {
                 zIndex: -1
             },
             background: {
-                color: "#222"
+                color: theme.colors.gray[3]
             },
             fpsLimit: 60,
             particles: {
-                color: { value: "#333" },
+                color: { 
+                    value: theme.colors.gray[6],
+                },
                 links: {
-                    color: "#ffffff",
-                    distance: 60,
-                    enable: false,
-                    opacity: 0.2,
+                    color: theme.colors.gray[9],
+                    distance: 80,
+                    enable: true,
+                    opacity: 0.4,
                     width: 2
                 },
                 move: {
                     attract: { enable: false, rotateX: 600, rotateY: 1200 },
-                    direction: "bottom",
+                    direction: "top",
                     enable: true,
                     outMode: "out",
-                    random: false,
+                    random: true,
                     size: true,
-                    speed: 2,
+                    speed: 3,
                     straight: false
                 },
                 number: { density: { enable: true, area: 800 }, value: 100 },
                 opacity: {
                     random: true,
-                    value: 1.0
+                    value: 0.7
                 },
                 shape: {
                     type: "circle"
@@ -44,7 +50,7 @@ export default function ParticlesBackground() {
                     value: 5
                 }
             },
-            detectRetina: true
+            detectRetina: true,
         }}
         />
     )

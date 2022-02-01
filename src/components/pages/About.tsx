@@ -11,7 +11,6 @@ import {
     useMantineTheme,
 } from '@mantine/core';
 import { useMediaQuery } from "@mantine/hooks";
-import { useLocation } from 'react-router-dom';
 
 
 export default function About() {
@@ -20,7 +19,6 @@ export default function About() {
     const largerThanSm = useMediaQuery(`(min-width: ${theme.breakpoints.sm}px)`);
 
     return (
-
         <Center>
             <Grid
                 columns={24}
@@ -34,7 +32,9 @@ export default function About() {
             >
                 <Grid.Col offset={0} span={largerThanSm ? 10 : 24}>
                     <svg viewBox="0 0 64 40" height={"300"} width={largerThanSm ? "640" : "240"}>
-                        <text x={"0"} y={"15"} fill={"white"}><tspan>Warren</tspan><tspan x={"0"} y={"34"}>Goodson</tspan></text>
+                        <text x={"0"} y={"15"} fill={"black"} fontWeight={"400"}>
+                            <tspan>Warren</tspan><tspan x={"0"} y={"34"}>Goodson</tspan>
+                        </text>
                     </svg>
                 </Grid.Col>
                 <Grid.Col span={largerThanSm ? 8 : 24}>
@@ -60,6 +60,5 @@ export default function About() {
                 <Grid.Col span={2} />
             </Grid>
         </Center>
-
     );
 }
