@@ -21,7 +21,7 @@ export default function Projects() {
             style={{ height: "inherit", width: "100%" }}
         >
             <Grid.Col span={largerThanSm ? 6 : 12}>
-                <Paper padding="lg">
+                <Paper padding="sm">
                     <Group position="apart" style={{ marginBottom: "1rem" }}>
                         <Title order={1}>Projects</Title>
                     </Group>

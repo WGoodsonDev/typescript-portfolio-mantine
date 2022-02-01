@@ -2,14 +2,20 @@ import React from "react";
 import {
     Card,
     Table,
-    Text
+    Text,
+    useMantineTheme
 } from "@mantine/core";
+import { useMediaQuery } from "@mantine/hooks";
 
 export default function ProjectTable() {
+
+    const theme = useMantineTheme();
+    const largerThanSm = useMediaQuery(`(min-width: ${theme.breakpoints.sm}px)`);
+
     return (
         <Card>
             <br />
-            <Table highlightOnHover>
+            <Table highlightOnHover style={{overflowX: "auto"}}>
                 <thead>
                     <tr>
                         <th>Project</th>
@@ -25,7 +31,7 @@ export default function ProjectTable() {
                                 component="span"
                                 align="center"
                                 variant="gradient"
-                                gradient={{ from: 'indigo', to: 'cyan', deg: 60 }}
+                                gradient={{ from: 'teal', to: 'blue', deg: 60 }}
                                 size="xl"
                                 weight={700}
                                 style={{ fontFamily: 'Greycliff CF, sans-serif' }}
@@ -43,11 +49,11 @@ export default function ProjectTable() {
                     </tr>
                     <tr>
                         <td>
-                        <Text
+                            <Text
                                 component="span"
                                 align="center"
                                 variant="gradient"
-                                gradient={{ from: 'indigo', to: 'cyan', deg: 60 }}
+                                gradient={{ from: 'teal', to: 'blue', deg: 60 }}
                                 size="xl"
                                 weight={700}
                                 style={{ fontFamily: 'Greycliff CF, sans-serif' }}
@@ -61,11 +67,11 @@ export default function ProjectTable() {
                     </tr>
                     <tr>
                         <td>
-                        <Text
+                            <Text
                                 component="span"
                                 align="center"
                                 variant="gradient"
-                                gradient={{ from: 'indigo', to: 'cyan', deg: 60 }}
+                                gradient={{ from: 'teal', to: 'blue', deg: 60 }}
                                 size="xl"
                                 weight={700}
                                 style={{ fontFamily: 'Greycliff CF, sans-serif' }}
@@ -81,11 +87,11 @@ export default function ProjectTable() {
                     </tr>
                     <tr>
                         <td>
-                        <Text
+                            <Text
                                 component="span"
                                 align="center"
                                 variant="gradient"
-                                gradient={{ from: 'indigo', to: 'cyan', deg: 60 }}
+                                gradient={{ from: 'teal', to: 'blue', deg: 60 }}
                                 size="xl"
                                 weight={700}
                                 style={{ fontFamily: 'Greycliff CF, sans-serif' }}

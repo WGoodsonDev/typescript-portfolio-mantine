@@ -38,10 +38,13 @@ export default function TechStack() {
                         <Container fluid>
                             <Grid>
                                 <Grid.Col>
-                                    <Badge size="xl" style={{ marginBottom: "12px" }}>
+                                    <Badge size="xl"
+                                        variant={"gradient"}
+                                        gradient={{ from: "teal", to: "blue" }}
+                                        style={{ marginBottom: "12px" }}>
                                         Frontend Tech
                                     </Badge>
-                                    <Chips size={chipSize} radius="md" defaultValue={['checked']} style={{ display: "flex" }}>
+                                    <Chips color={"teal"} size={chipSize} radius="md" defaultValue={['checked']} style={{ display: "flex" }}>
                                         <Chip value="checked">React.js</Chip>
                                         <Chip value="checked">HTML5</Chip>
                                         <Chip value="checked">CSS3</Chip>
@@ -50,7 +53,10 @@ export default function TechStack() {
 
                                     </Chips>
                                     <Divider style={{ margin: "10px 0px 10px 0px" }} />
-                                    <Badge size="xl" style={{ marginBottom: "12px" }}>
+                                    <Badge size="xl"
+                                        variant={"gradient"}
+                                        gradient={{ from: "teal", to: "blue" }}
+                                        style={{ marginBottom: "12px" }}>
                                         Backend Tech
                                     </Badge>
                                     <Chips size={chipSize} radius="md" defaultValue={['checked']} style={{ display: "flex" }}>
@@ -62,10 +68,13 @@ export default function TechStack() {
                                         <Chip value="checked">MongoDB</Chip>
                                     </Chips>
                                     <Divider style={{ margin: "10px 0px 10px 0px" }} />
-                                    <Badge size="xl" style={{ marginBottom: "12px" }}>
+                                    <Badge size="xl"
+                                        variant={"gradient"}
+                                        gradient={{ from: "teal", to: "blue" }}
+                                        style={{ marginBottom: "12px" }}>
                                         Languages
                                     </Badge>
-                                    <Chips size={chipSize} radius="md" defaultValue={['checked']} style={{ display: "flex" }}>
+                                    <Chips color={"teal"} size={chipSize} radius="md" defaultValue={['checked']} style={{ display: "flex" }}>
                                         <Chip value="checked">JavaScript</Chip>
                                         <Chip value="checked">TypeScript</Chip>
                                         <Chip value="checked">C/C++</Chip>
@@ -73,7 +82,10 @@ export default function TechStack() {
                                         <Chip value="checked">Python</Chip>
                                     </Chips>
                                     <Divider style={{ margin: "10px 0px 10px 0px" }} />
-                                    <Badge size="xl" style={{ marginBottom: "12px" }}>
+                                    <Badge size="xl"
+                                        variant={"gradient"}
+                                        gradient={{ from: "teal", to: "blue" }}
+                                        style={{ marginBottom: "12px" }}>
                                         Tools
                                     </Badge>
                                     <Chips size={chipSize} radius="md" defaultValue={['checked']} style={{ display: "flex" }}>

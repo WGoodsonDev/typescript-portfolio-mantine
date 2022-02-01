@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {
   Affix,
   Button,
+  Loader,
   MantineProvider,
   Transition,
   useMantineTheme
@@ -16,12 +17,18 @@ import ParticlesBackground from './components/ParticlesBackground';
 
 function App() {
 
+  const[loading, setLoading] = useState(true);
+
   const theme = useMantineTheme();
-  const {ref, x, y} = useMouse();
+  const { ref, x, y } = useMouse();
+
 
   return (
-    <MantineProvider>
-      
+    <MantineProvider theme={{ 
+        fontFamily: "Roboto, sans-serif",
+        loader: "bars"
+      }
+    }>
       <div style={{
         // backgroundColor: theme.colors.gray[3],
       }}>
@@ -36,7 +43,7 @@ function App() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button rightIcon={<ExternalLinkIcon />} style={transitionStyles}>
+                <Button variant={"gradient"} gradient={{ from: 'teal', to: 'blue', deg: 60 }} rightIcon={<ExternalLinkIcon />} style={transitionStyles}>
                   View source
                 </Button>
               </a>

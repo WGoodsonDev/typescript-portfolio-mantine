@@ -28,21 +28,22 @@ export default function Header() {
                 display: "flex",
                 alignItems: "center",
                 padding: "10px",
-                backgroundColor: theme.colors.gray[6],
+                backgroundColor: theme.colors.gray[9],
                 zIndex: 0
             }}>
                 <MediaQuery largerThan={"sm"} styles={{ display: "none" }}>
                     <Burger
+                        title="Open navigation"
                         opened={burgerOpened}
                         onClick={() => setBurgerOpened((openedState) => !openedState)}
                         size={"sm"}
-                        color={theme.colors.gray[6]}
+                        color={"#ffffff"}
                         mr={"xl"}
                     />
                 </MediaQuery>
-                <div style={{ marginRight: "20px" }}>
+                {/* <div style={{ marginRight: "20px" }}>
                     <Avatar alt="Warren Goodson" src="./logo.png" />
-                </div>
+                </div> */}
 
                 <MediaQuery smallerThan={"sm"} styles={{ display: "none" }}>
                     <Group>
@@ -58,7 +59,7 @@ export default function Header() {
                         target="_blank"
                         rel="noopener noreferrer"
                         variant="gradient"
-                        gradient={{ from: 'blue', to: 'cyan', deg: 60 }}
+                        gradient={{ from: 'teal', to: 'blue', deg: 60 }}
                         radius="lg"
                         leftIcon={<GitHubLogoIcon width={18} height={18} />}
                         rightIcon={<ExternalLinkIcon width={15} height={15} />}
@@ -72,7 +73,7 @@ export default function Header() {
                         target="_blank"
                         rel="noopener noreferrer"
                         variant="gradient"
-                        gradient={{ from: 'blue', to: 'cyan', deg: 60 }}
+                        gradient={{ from: 'teal', to: 'blue', deg: 60 }}
                         radius="lg"
                         rightIcon={<ExternalLinkIcon width={15} height={15} />}
                     >
@@ -95,7 +96,6 @@ export default function Header() {
                                 padding="md"
                                 shadow="xs"
                                 style={{
-                                    width: "100%",
                                     zIndex: 2,
                                     marginLeft: "-20px",
                                     marginTop: "10px",

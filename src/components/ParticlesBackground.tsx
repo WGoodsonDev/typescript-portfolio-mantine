@@ -13,15 +13,15 @@ export default function ParticlesBackground() {
                 zIndex: -1
             },
             background: {
-                color: theme.colors.gray[3]
+                color: theme.colors.gray[9]
             },
             fpsLimit: 60,
             particles: {
                 color: { 
-                    value: theme.colors.gray[6],
+                    value: theme.colors.teal[2],
                 },
                 links: {
-                    color: theme.colors.gray[9],
+                    color: theme.colors.blue[9],
                     distance: 80,
                     enable: true,
                     opacity: 0.4,
@@ -37,7 +37,7 @@ export default function ParticlesBackground() {
                     speed: 3,
                     straight: false
                 },
-                number: { density: { enable: true, area: 800 }, value: 100 },
+                number: { density: { enable: true, area: 800 }, value: 40 },
                 opacity: {
                     random: true,
                     value: 0.7
