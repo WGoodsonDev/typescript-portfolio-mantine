@@ -43,7 +43,6 @@
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
 
@@ -119,11 +118,4 @@ Warren Goodson - [LinkedIn](https://www.linkedin.com/in/warren-goodson/) - warre
 
 Project Link: [https://github.com/WGoodsonDev/typescript-portfolio-mantine](https://github.com/WGoodsonDev/typescript-portfolio-mantine)
 
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-
-* [Jas Laferriere (Fizzi)](https://github.com/JLaferri)
-* [Project Slippi](https://slippi.gg)
 
