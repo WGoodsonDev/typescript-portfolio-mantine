@@ -19,7 +19,7 @@ export default function TechStack() {
     const theme = useMantineTheme();
     const largerThanSm = useMediaQuery(`(min-width: ${theme.breakpoints.sm}px)`);
 
-    const chipSize = largerThanSm ? "lg" : "xs";
+    const chipSize = largerThanSm ? "md" : "xs";
 
     return (
 
@@ -34,10 +34,10 @@ export default function TechStack() {
                     <Group position="apart" style={{ marginBottom: "1rem" }}>
                         <Title order={1}>Tech Stack</Title>
                     </Group>
-                    <Card style={{ marginBottom: "20px" }}>
+                    <Card>
                         <Container fluid>
                             <Grid>
-                                <Grid.Col>
+                                <Grid.Col span={12}>
                                     <Badge size="xl"
                                         variant={"gradient"}
                                         gradient={{ from: "teal", to: "blue" }}

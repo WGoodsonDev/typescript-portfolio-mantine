@@ -61,7 +61,7 @@ export default function ProjectTable() {
                                 SSU Scheduler
                             </Text>
                         </td>
-                        <td>Full-stack application for scheduling classes in higher education. Senior Capstone Project at Sonoma State University.</td>
+                        <td>Full-stack application for scheduling classes in higher education. Responsible for maintaining and updating backend.</td>
                         <td>React | D3 | MySQL | Koa</td>
                         <td>Proprietary</td>
                     </tr>
