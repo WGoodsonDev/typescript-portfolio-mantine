@@ -7,9 +7,9 @@ import {
     Title,
     Divider
 } from '@mantine/core';
-import TechStack from "./pages/TechStack";
-import About from "./pages/About";
-import Projects from "./pages/Projects";
+import TechStack from "./pages/TechStack/TechStack";
+import About from "./pages/About/About";
+import Projects from "./pages/Projects/Projects";
 import { Route, Routes } from 'react-router-dom';
 
 export default function Content() {

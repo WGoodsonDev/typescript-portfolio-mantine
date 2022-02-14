@@ -10,7 +10,7 @@ import {
 import { useMouse } from '@mantine/hooks';
 import { ExternalLinkIcon } from '@radix-ui/react-icons';
 import Content from './components/Content';
-import Footer from './components/Footer';
+import Footer from './components/UI/Footer';
 import Header from './components/Header';
 import ParticlesBackground from './components/ParticlesBackground';
 

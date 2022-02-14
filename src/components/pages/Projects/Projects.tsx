@@ -6,7 +6,7 @@ import {
     useMantineTheme
 } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
-import ProjectTable from '../ProjectTable';
+import ProjectTable from './ProjectTable';
 
 export default function Projects() {
 
